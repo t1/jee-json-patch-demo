@@ -1,0 +1,6 @@
+= Jakarta EE 11 Demo for JSON Patch and JSON Merge Patch
+
+This is a minimal Jakarta EE 11 demo project to show how to use JSON Patch and JSON Merge Patch.
+The tests runs on a WildFly 25 application server.
+
+The example is from the https://docs.jboss.org/resteasy/docs/4.7.6.Final/userguide/html/JAX-RS_2.1_additions.html#d4e1803[RESTEasy User Guide].

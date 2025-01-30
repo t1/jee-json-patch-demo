@@ -1,0 +1,15 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %X %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+    </root>
+    <logger name="com.github.dockerjava" level="INFO"/>
+    <logger name="org.jboss.resteasy.microprofile.client.RestClientBuilderImpl" level="INFO"/>
+    <logger name="org.jboss.resteasy.resteasy_jaxrs.i18n" level="INFO"/>
+    <logger name="org.testcontainers" level="INFO"/>
+</configuration>
