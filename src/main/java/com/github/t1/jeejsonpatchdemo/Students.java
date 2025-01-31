@@ -20,6 +20,7 @@ import static com.github.t1.jeejsonpatchdemo.Gender.female;
 import static com.github.t1.jeejsonpatchdemo.Gender.male;
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON_PATCH_JSON;
+import static jakarta.ws.rs.core.MediaType.APPLICATION_MERGE_PATCH_JSON;
 
 @Path("/students")
 @Singleton
@@ -54,7 +55,7 @@ public class Students {
 
     @PATCH
     @Path("/{id}")
-    @Consumes("application/merge-patch+json")
+    @Consumes(APPLICATION_MERGE_PATCH_JSON)
     public Student mergePatchStudent(@PathParam("id") long id, Student student) {
         log.debug("merge patch student {}: {}", id, student);
         if (!students.containsKey(id)) throw new NotFoundException();
